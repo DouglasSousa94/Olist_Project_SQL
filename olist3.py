@@ -15,10 +15,10 @@ conn_olist = create_engine(string_conexao)
 
 # Inserindo valores nas tabelas com o Pandas
 
-lista = os.listdir('Data')
+lista = os.listdir('data')
 
 for csv in lista:
-    df_order_reviews = pd.read_csv('Data/'+csv)
+    df_order_reviews = pd.read_csv('data/'+csv)
     df_order_reviews.to_sql(csv.replace('.csv',''), conn_olist, if_exists='replace', index=False)
 
 
