@@ -1,10 +1,7 @@
-#  Dataset Disponibilizado pela Olist"
-
 import pandas as pd
-
-!pip install psycopg2
-!pip install sqlalchemy
 from sqlalchemy import create_engine
+import os
+import psycopg2
 
 string_conexao = 'postgresql://postgres:DS2022@localhost:5432/Olist'
 conn_olist = create_engine(string_conexao)
