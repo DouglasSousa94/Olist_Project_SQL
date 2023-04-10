@@ -19,6 +19,6 @@ lista = os.listdir('data')
 
 for csv in lista:
     df_order_reviews = pd.read_csv('data/'+csv)
-    df_order_reviews.to_sql(csv.replace('.csv',''), conn_olist, if_exists='replace', index=False)
+    df_order_reviews.to_sql(csv.replace('_database.csv','').replace('olist_',''), conn_olist, if_exists='replace', index=False)
 
 
